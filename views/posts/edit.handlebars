@@ -1,0 +1,16 @@
+<div class="card card-body">
+    <h3>Edit Post</h3>
+    <form action="/posts/{{post._id}}?_method=PUT" method="post">
+        <input type="hidden" name="_method" value="PUT" id="">
+        <div class="form-group">
+            <label for="title">Title</label>
+            <input type="text" class="form-control" name="title" required
+                placeholder="Please write a title for the post" value="{{post.title}}">
+        </div>
+        <div class="form-group">
+            <label for="text">Description</label>
+            <textarea name="text" class="form-control" required>{{post.text}}</textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Save Change</button>
+    </form>
+</div>
